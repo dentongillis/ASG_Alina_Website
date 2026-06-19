@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --asg-black: #0b0b0c;
+  --asg-charcoal: #1a1b1d;
+  --asg-ink: #1a1a1a;
+  --asg-muted: #5a5c60;
+  --asg-cream: #faf8f4;
+  --asg-white: #ffffff;
+  --asg-gold: #c6a15b;
+  --asg-gold-light: #e4c77e;
+  --asg-gold-deep: #9a7b3a;
+  --asg-silver: #c9cbce;
+  --asg-silver-deep: #8a8d91;
+  --asg-hairline: rgba(198, 161, 91, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--asg-white);
+  color: var(--asg-ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(198, 161, 91, 0.35);
+  color: var(--asg-ink);
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    color: var(--asg-ink);
+    letter-spacing: -0.01em;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.05;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--asg-gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #9a7b3a 0%, #e4c77e 45%, #c6a15b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .font-cinzel {
+    font-family: var(--font-cinzel), Georgia, serif;
+  }
+
+  .eyebrow {
+    font-family: var(--font-cinzel), Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: var(--asg-gold);
+  }
+
+  .tagline {
+    font-family: var(--font-cinzel), Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+  }
+
+  .body-lg {
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+
+  .hairline {
+    border-color: var(--asg-hairline);
+  }
+
+  .gold-rule {
+    background: linear-gradient(
+      90deg,
+      rgba(154, 123, 58, 0) 0%,
+      #c6a15b 20%,
+      #e4c77e 50%,
+      #c6a15b 80%,
+      rgba(154, 123, 58, 0) 100%
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

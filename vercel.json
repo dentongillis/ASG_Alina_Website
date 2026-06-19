@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.alineasalesgroup.com" }],
+      "destination": "https://alineasalesgroup.com/$1",
+      "permanent": true
+    }
+  ]
+}
