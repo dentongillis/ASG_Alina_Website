@@ -29,7 +29,7 @@ export default function HomePage() {
       />
       <StatsBar />
       <ValueProp />
-      <div id="what-we-represent" className="scroll-mt-24">
+      <div id="what-we-represent" className="scroll-mt-20 sm:scroll-mt-24">
         <Categories variant="teaser" />
       </div>
       <ServicesTeaser />

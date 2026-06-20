@@ -53,7 +53,7 @@ export function CalendlyEmbed() {
                 <iframe
                   src={CALENDLY_URL}
                   title="Book a call with Adam Smith"
-                  className="w-full h-[720px] border-0"
+                  className="w-full h-[640px] sm:h-[720px] border-0"
                   loading="lazy"
                 />
               </div>

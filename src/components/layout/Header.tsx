@@ -46,7 +46,7 @@ export function Header() {
             : "bg-asg-white/95 backdrop-blur border-b border-asg-hairline",
         )}
       >
-        <Container className="flex h-20 sm:h-24 items-center justify-between">
+        <Container className="flex h-16 sm:h-20 lg:h-24 items-center justify-between gap-3">
           <Link
             href="/"
             aria-label="Alinea Sales Group — home"
@@ -57,7 +57,7 @@ export function Header() {
                 "inline-flex items-center justify-center transition-all duration-300",
                 transparent
                   ? "bg-transparent p-0"
-                  : "bg-asg-black rounded-[3px] p-1.5 sm:p-2 ring-1 ring-asg-hairline shadow-[0_1px_2px_rgba(0,0,0,0.08)]",
+                  : "bg-asg-black rounded-[3px] p-1 sm:p-1.5 lg:p-2 ring-1 ring-asg-hairline shadow-[0_1px_2px_rgba(0,0,0,0.08)]",
               )}
             >
               <Image
@@ -66,7 +66,7 @@ export function Header() {
                 width={1024}
                 height={1024}
                 priority
-                className="h-14 sm:h-16 w-auto"
+                className="h-10 sm:h-12 lg:h-14 w-auto"
               />
             </span>
           </Link>
@@ -96,26 +96,31 @@ export function Header() {
             })}
           </nav>
 
-          <div className="hidden lg:block">
-            <Button href={bookACallHref()} size="md">
-              Book a Call
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Button
+              href={bookACallHref()}
+              size="md"
+              className="px-4 sm:px-5 lg:px-6 text-sm sm:text-[0.95rem]"
+            >
+              <span className="lg:hidden">Book</span>
+              <span className="hidden lg:inline">Book a Call</span>
             </Button>
-          </div>
 
-          <button
-            type="button"
-            aria-label="Open menu"
-            aria-expanded={menuOpen}
-            className={cn(
-              "lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-[2px] border",
-              transparent
-                ? "text-asg-white border-asg-white/30"
-                : "text-asg-ink border-asg-hairline",
-            )}
-            onClick={() => setMenuOpen(true)}
-          >
-            <Menu className="h-5 w-5" strokeWidth={1.5} />
-          </button>
+            <button
+              type="button"
+              aria-label="Open menu"
+              aria-expanded={menuOpen}
+              className={cn(
+                "lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-[2px] border shrink-0",
+                transparent
+                  ? "text-asg-white border-asg-white/30"
+                  : "text-asg-ink border-asg-hairline",
+              )}
+              onClick={() => setMenuOpen(true)}
+            >
+              <Menu className="h-5 w-5" strokeWidth={1.5} />
+            </button>
+          </div>
         </Container>
       </header>
 
@@ -125,14 +130,14 @@ export function Header() {
           role="dialog"
           aria-modal="true"
         >
-          <Container className="flex h-20 sm:h-24 items-center justify-between">
+          <Container className="flex h-16 sm:h-20 lg:h-24 items-center justify-between shrink-0">
             <Link href="/" aria-label="Alinea Sales Group — home">
               <Image
                 src="/asg-logo.png"
                 alt="Alinea Sales Group"
                 width={1024}
                 height={1024}
-                className="h-14 sm:h-16 w-auto"
+                className="h-10 sm:h-12 lg:h-14 w-auto"
               />
             </Link>
             <button
@@ -145,20 +150,31 @@ export function Header() {
             </button>
           </Container>
           <nav
-            className="flex-1 flex flex-col items-center justify-center gap-7 px-6"
+            className="flex-1 overflow-y-auto flex flex-col items-center justify-center gap-6 sm:gap-7 px-6 py-8"
             aria-label="Mobile primary"
           >
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-2xl font-medium tracking-tight text-asg-white/90 hover:text-asg-gold-light transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const active =
+                link.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    "text-xl sm:text-2xl font-medium tracking-tight transition-colors",
+                    active
+                      ? "text-asg-gold-light"
+                      : "text-asg-white/90 hover:text-asg-gold-light",
+                  )}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
-          <div className="pb-10 px-6">
+          <div className="pb-8 sm:pb-10 px-6 shrink-0">
             <Container>
               <Button href={bookACallHref()} size="lg" className="w-full">
                 Book a Call

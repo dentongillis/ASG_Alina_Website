@@ -26,7 +26,7 @@ export function TerritoryMap() {
           </div>
 
           <Reveal className="lg:col-span-7">
-            <div className="relative aspect-[5/4] w-full rounded-md border border-asg-hairline bg-asg-cream p-6 sm:p-10">
+            <div className="relative aspect-[5/4] w-full rounded-md border border-asg-hairline bg-asg-cream p-4 sm:p-6 md:p-10">
               <TerritoryDiagram />
             </div>
           </Reveal>
@@ -67,16 +67,16 @@ function TerritoryDiagram() {
         fill="none"
         opacity="0.85"
       >
-        <path d="M 110 90 C 280 90, 320 180, 480 200" />
-        <path d="M 110 200 L 480 200" />
-        <path d="M 110 310 C 280 310, 320 220, 480 200" />
+        <path d="M 210 90 C 320 90, 360 180, 480 200" />
+        <path d="M 210 200 L 480 200" />
+        <path d="M 210 310 C 320 310, 360 220, 480 200" />
       </g>
 
       {/* Supplier nodes */}
       {[
-        { x: 110, y: 90, label: "Canada", code: "CA" },
-        { x: 110, y: 200, label: "United States", code: "US" },
-        { x: 110, y: 310, label: "Mexico", code: "MX" },
+        { x: 210, y: 90, label: "Canada", code: "CA" },
+        { x: 210, y: 200, label: "United States", code: "US" },
+        { x: 210, y: 310, label: "Mexico", code: "MX" },
       ].map((n) => (
         <g key={n.code}>
           <circle
@@ -86,13 +86,14 @@ function TerritoryDiagram() {
             fill="url(#goldDot)"
             stroke="#9A7B3A"
             strokeWidth="0.5"
+            vectorEffect="non-scaling-stroke"
           />
           <text
             x={n.x - 22}
-            y={n.y + 4}
+            y={n.y - 2}
             textAnchor="end"
             fontFamily="var(--font-inter), system-ui, sans-serif"
-            fontSize="14"
+            fontSize="24"
             fontWeight="600"
             fill="#1A1A1A"
           >
@@ -103,7 +104,7 @@ function TerritoryDiagram() {
             y={n.y + 22}
             textAnchor="end"
             fontFamily="var(--font-cinzel), Georgia, serif"
-            fontSize="10"
+            fontSize="16"
             letterSpacing="2"
             fill="#9A7B3A"
           >
@@ -114,7 +115,13 @@ function TerritoryDiagram() {
 
       {/* Elkhart node */}
       <g>
-        <circle cx="480" cy="200" r="14" fill="url(#goldDot)" />
+        <circle
+          cx="480"
+          cy="200"
+          r="14"
+          fill="url(#goldDot)"
+          vectorEffect="non-scaling-stroke"
+        />
         <circle
           cx="480"
           cy="200"
@@ -123,6 +130,7 @@ function TerritoryDiagram() {
           stroke="#C6A15B"
           strokeWidth="1"
           opacity="0.55"
+          vectorEffect="non-scaling-stroke"
         />
         <circle
           cx="480"
@@ -132,13 +140,14 @@ function TerritoryDiagram() {
           stroke="#C6A15B"
           strokeWidth="0.75"
           opacity="0.3"
+          vectorEffect="non-scaling-stroke"
         />
         <text
           x="480"
-          y="170"
+          y="160"
           textAnchor="middle"
           fontFamily="var(--font-cinzel), Georgia, serif"
-          fontSize="10"
+          fontSize="16"
           letterSpacing="2"
           fill="#9A7B3A"
         >
@@ -146,10 +155,10 @@ function TerritoryDiagram() {
         </text>
         <text
           x="480"
-          y="247"
+          y="258"
           textAnchor="middle"
           fontFamily="var(--font-inter), system-ui, sans-serif"
-          fontSize="13"
+          fontSize="22"
           fontWeight="600"
           fill="#1A1A1A"
         >

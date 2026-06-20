@@ -32,8 +32,8 @@ export function Hero({
       className={
         "relative isolate overflow-hidden bg-asg-black text-asg-white " +
         (isFull
-          ? "min-h-[88vh] flex items-center pt-24 pb-20 sm:pt-28"
-          : "pt-32 pb-20 sm:pt-36 md:pt-40 md:pb-24")
+          ? "min-h-[88svh] md:min-h-[88vh] flex items-center pt-20 pb-16 sm:pt-28 sm:pb-20"
+          : "pt-24 pb-20 sm:pt-32 md:pt-40 md:pb-24")
       }
     >
       {/* Dark backdrop layer (replaceable RV/manufacturing imagery) */}
@@ -85,9 +85,13 @@ export function Hero({
           {isFull && (
             <motion.div
               variants={heroItem}
-              className="mt-10 flex flex-wrap items-center gap-4"
+              className="mt-10 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-4"
             >
-              <Button href={primaryCta.href} size="lg">
+              <Button
+                href={primaryCta.href}
+                size="lg"
+                className="w-full sm:w-auto justify-center"
+              >
                 {primaryCta.label}
               </Button>
               {secondaryCta && (
@@ -96,6 +100,7 @@ export function Hero({
                   variant="secondary"
                   tone="dark"
                   size="lg"
+                  className="w-full sm:w-auto justify-center"
                 >
                   {secondaryCta.label}
                 </Button>
