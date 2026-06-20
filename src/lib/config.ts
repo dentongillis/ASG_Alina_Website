@@ -7,8 +7,8 @@ export const SITE_URL = "https://alineasalesgroup.com";
 export const TAGLINE = "Relationships. Access. Results.";
 
 // [ADAM TODO] — fill these in before launch
-export const PHONE: string = ""; // e.g. "+1-574-555-0100"
-export const EMAIL: string = ""; // e.g. "adam@alineasalesgroup.com"
+export const PHONE: string = "(574) 370-1614";
+export const EMAIL: string = "info@alineasalesgroup.com";
 
 export const CALENDLY_URL =
   process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/REPLACE_ME"; // [ADAM TODO]
