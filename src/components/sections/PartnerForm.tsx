@@ -136,7 +136,7 @@ export function PartnerForm() {
                     </Button>
                     {FORMSPREE_IS_PLACEHOLDER && (
                       <span className="text-xs text-asg-muted">
-                        [ADAM TODO] Formspree endpoint not configured yet.
+                        Coming Soon
                       </span>
                     )}
                   </div>

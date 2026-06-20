@@ -37,9 +37,6 @@ export function CalendlyEmbed() {
                   The Calendly scheduler will appear here once it&rsquo;s
                   configured. In the meantime, you can request a call by email.
                 </p>
-                <p className="mt-2 text-xs text-asg-muted">
-                  [ADAM TODO] Set <code>NEXT_PUBLIC_CALENDLY_URL</code>.
-                </p>
                 <div className="mt-7 inline-flex">
                   <Button href={bookACallHref()} size="lg">
                     Book a Call
