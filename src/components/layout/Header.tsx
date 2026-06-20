@@ -81,8 +81,9 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  aria-current={active ? "page" : undefined}
                   className={cn(
-                    "text-sm font-medium tracking-tight transition-colors",
+                    "group relative text-sm font-medium tracking-tight transition-colors py-1",
                     transparent
                       ? "text-asg-white/85 hover:text-asg-gold-light"
                       : "text-asg-ink/80 hover:text-asg-gold-deep",
@@ -91,6 +92,15 @@ export function Header() {
                   )}
                 >
                   {link.label}
+                  <span
+                    aria-hidden="true"
+                    className={cn(
+                      "pointer-events-none absolute left-0 right-0 -bottom-1 h-px origin-center transition-transform duration-300 ease-out bg-gold-line",
+                      active
+                        ? "scale-x-100 opacity-100"
+                        : "scale-x-0 opacity-0 group-hover:scale-x-75 group-hover:opacity-60",
+                    )}
+                  />
                 </Link>
               );
             })}
@@ -162,14 +172,22 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  aria-current={active ? "page" : undefined}
                   className={cn(
-                    "text-xl sm:text-2xl font-medium tracking-tight transition-colors",
+                    "relative inline-flex flex-col items-center gap-2 text-xl sm:text-2xl font-medium tracking-tight transition-colors",
                     active
                       ? "text-asg-gold-light"
                       : "text-asg-white/90 hover:text-asg-gold-light",
                   )}
                 >
                   {link.label}
+                  <span
+                    aria-hidden="true"
+                    className={cn(
+                      "h-px w-12 bg-gold-line transition-opacity duration-300",
+                      active ? "opacity-100" : "opacity-0",
+                    )}
+                  />
                 </Link>
               );
             })}
