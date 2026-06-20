@@ -132,7 +132,7 @@ export function PartnerForm() {
 
                   <div className="flex flex-wrap items-center gap-4 pt-2">
                     <Button type="submit" disabled={isSubmitting} size="lg">
-                      {isSubmitting ? "Sending\u2026" : "Send to Adam"}
+                      {isSubmitting ? "Sending\u2026" : "Send Message"}
                     </Button>
                     {FORMSPREE_IS_PLACEHOLDER && (
                       <span className="text-xs text-asg-muted">

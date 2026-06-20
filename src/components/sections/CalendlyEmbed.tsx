@@ -16,7 +16,7 @@ export function CalendlyEmbed() {
         <div className="max-w-3xl">
           <SectionLine variant="short" className="mb-6" />
           <Reveal>
-            <h2 className="text-balance">Book a call with Adam.</h2>
+            <h2 className="text-balance">Book a call with Alinea Sales Group.</h2>
           </Reveal>
           <Reveal>
             <p className="mt-5 text-asg-ink/80">
