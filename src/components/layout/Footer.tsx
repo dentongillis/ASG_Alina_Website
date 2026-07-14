@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Container } from "@/components/primitives/Container";
 import { SectionLine } from "@/components/primitives/SectionLine";
 import {
+  ADDRESS,
+  ADDRESS_LINE,
   EMAIL,
   NAV_LINKS,
   PHONE,
@@ -86,7 +88,19 @@ export function Footer() {
                   </span>
                 )}
               </li>
-              <li className="text-asg-white/60 italic">Office address coming soon.</li>
+              <li>
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS_LINE)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="not-italic hover:text-asg-gold-light transition-colors"
+                >
+                  <span className="block">{ADDRESS.line1}</span>
+                  <span className="block">
+                    {ADDRESS.city}, {ADDRESS.region} {ADDRESS.postalCode}
+                  </span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

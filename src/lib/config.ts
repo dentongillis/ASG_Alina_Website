@@ -10,6 +10,16 @@ export const TAGLINE = "Relationships. Access. Results.";
 export const PHONE: string = "(574) 370-1614";
 export const EMAIL: string = "sales@alineasalesgroup.com";
 
+export const ADDRESS = {
+  line1: "223 S Main St",
+  city: "Elkhart",
+  region: "IN",
+  postalCode: "46514",
+  country: "USA",
+} as const;
+
+export const ADDRESS_LINE = `${ADDRESS.line1}, ${ADDRESS.city}, ${ADDRESS.region} ${ADDRESS.postalCode}`;
+
 export const CALENDLY_URL =
   process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/REPLACE_ME"; // [ADAM TODO]
 export const FORMSPREE_URL =

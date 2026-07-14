@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { Container } from "@/components/primitives/Container";
 import { Section } from "@/components/primitives/Section";
 import { Reveal } from "@/components/primitives/Reveal";
-import { EMAIL, PHONE } from "@/lib/config";
+import { ADDRESS, ADDRESS_LINE, EMAIL, PHONE } from "@/lib/config";
 
 export function DirectContact() {
   return (
@@ -66,10 +66,17 @@ export function DirectContact() {
                 <MapPin className="h-5 w-5" strokeWidth={1.5} />
               </span>
               <h3 className="mt-5 text-lg font-semibold text-asg-ink">Office</h3>
-              <p className="mt-3 text-asg-muted italic">
-                A dedicated office address is on the way &mdash; we&rsquo;ll
-                post it here soon.
-              </p>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS_LINE)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-block text-asg-ink/85 hover:text-asg-gold-deep transition-colors"
+              >
+                <span className="block">{ADDRESS.line1}</span>
+                <span className="block">
+                  {ADDRESS.city}, {ADDRESS.region} {ADDRESS.postalCode}
+                </span>
+              </a>
             </article>
           </Reveal>
         </div>

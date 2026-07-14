@@ -96,7 +96,7 @@ ready to go.
 - [ ] **Formspree form endpoint** — set `NEXT_PUBLIC_FORMSPREE_URL` in Vercel env.
 - [ ] **Logo files** — add `public/asg-logo.svg` and a transparent `public/asg-logo.png`
       when available (the current PNG already works as-is).
-- [ ] **Office address** — update the Footer and Contact page once finalized.
+- [x] **Office address** — update the Footer and Contact page once finalized.
 - [ ] **Imagery** — search for `[ADAM TODO: swap image]` in
       [`src/components/sections/Hero.tsx`](src/components/sections/Hero.tsx) to
       add real RV-manufacturing photography behind the hero.
