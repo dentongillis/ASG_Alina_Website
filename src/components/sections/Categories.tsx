@@ -1,4 +1,4 @@
-import { Armchair, Zap, Cog, Cpu } from "lucide-react";
+import { Armchair, Palette, Hammer, Cpu } from "lucide-react";
 import { Container } from "@/components/primitives/Container";
 import { Section } from "@/components/primitives/Section";
 import { Eyebrow } from "@/components/primitives/Eyebrow";
@@ -20,25 +20,25 @@ const TEASER: Category[] = [
   {
     title: "Interior Components",
     copy:
-      "seating, cabinetry, flooring, soft goods, and the finishes that define the living space.",
+      "seating, cabinetry, hardware, fixtures, and the functional pieces that complete the living space.",
     Icon: Armchair,
   },
   {
-    title: "Electrical Components",
+    title: "Interior Decor",
     copy:
-      "power, wiring, lighting, and the systems that keep coaches running.",
-    Icon: Zap,
+      "countertops, solid surfaces, decorative finishes, and the materials that shape the look and feel of the interior.",
+    Icon: Palette,
   },
   {
-    title: "Chassis Components",
+    title: "Construction",
     copy:
-      "frames, suspension, and the structural hardware every build depends on.",
-    Icon: Cog,
+      "materials, components, and solutions used throughout the RV construction and assembly process.",
+    Icon: Hammer,
   },
   {
     title: "Emerging Tech",
     copy:
-      "connectivity, smart systems, and the next generation of solutions entering the RV market.",
+      "connectivity, smart systems, automation, and the next generation of solutions entering the RV market.",
     Icon: Cpu,
   },
 ];
@@ -48,25 +48,25 @@ const DETAILED: Category[] = [
   {
     title: "Interior Components",
     copy:
-      "Seating, cabinetry, flooring, soft goods, and the finishes that define the living space. The pieces buyers see and feel \u2014 and that drive perceived quality on the showroom floor.",
+      "Seating, cabinetry, hardware, fixtures, and the functional pieces that complete the living space. The pieces buyers see and touch \u2014 and that drive perceived quality on the showroom floor.",
     Icon: Armchair,
   },
   {
-    title: "Electrical Components",
+    title: "Interior Decor",
     copy:
-      "Power, wiring, lighting, and the systems that keep coaches running. Reliability matters; OEM purchasing teams expect partners who can hold tolerances at line speed.",
-    Icon: Zap,
+      "Countertops, solid surfaces, decorative finishes, and the materials that shape the look and feel of the interior. Design-driven categories where color, texture, and durability all have to line up.",
+    Icon: Palette,
   },
   {
-    title: "Chassis Components",
+    title: "Construction",
     copy:
-      "Frames, suspension, and the structural hardware every build depends on. Engineered hardware where consistency, capacity, and on-time delivery are non-negotiable.",
-    Icon: Cog,
+      "Materials, components, and solutions used throughout the RV construction and assembly process. Line-critical supply where consistency, capacity, and on-time delivery are non-negotiable.",
+    Icon: Hammer,
   },
   {
     title: "Emerging Tech",
     copy:
-      "Connectivity, smart systems, and the next generation of solutions entering the RV market. New categories we help position with OEMs that are actively spec\u2019ing forward.",
+      "Connectivity, smart systems, automation, and the next generation of solutions entering the RV market. New categories we help position with OEMs that are actively spec\u2019ing forward.",
     Icon: Cpu,
   },
 ];

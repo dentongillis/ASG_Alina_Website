@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: `%s \u2014 ${SITE_NAME}`,
   },
   description:
-    "Alinea Sales Group represents component suppliers across the U.S., Mexico, and Canada to the RV OEMs of Elkhart County \u2014 backed by nearly 25 years of relationships, access, and results.",
+    "Alinea Sales Group represents component suppliers across the U.S., Mexico, and Canada to the RV OEMs of Northern Indiana \u2014 backed by nearly 25 years of relationships, access, and results.",
   keywords: [
     "RV component sales rep",
     "RV manufacturer's representative",

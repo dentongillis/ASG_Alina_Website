@@ -12,7 +12,7 @@ export function TerritoryMap() {
             <SectionLine variant="short" className="mb-6" />
             <Reveal>
               <h2 className="text-balance">
-                North American suppliers. Elkhart County OEMs.
+                North American suppliers. Northern Indiana OEMs.
               </h2>
             </Reveal>
             <Reveal>

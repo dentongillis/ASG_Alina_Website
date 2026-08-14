@@ -12,7 +12,7 @@ import { bookACallHref } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Alinea Sales Group \u2014 RV Component Sales Representation",
   description:
-    "From your factory to the RV line \u2014 represented right. Alinea Sales Group represents component suppliers across the U.S., Mexico, and Canada to the RV OEMs of Elkhart County.",
+    "From your factory to the RV line \u2014 represented right. Alinea Sales Group represents component suppliers across the U.S., Mexico, and Canada to the RV OEMs of Northern Indiana.",
 };
 
 export default function HomePage() {
@@ -22,7 +22,7 @@ export default function HomePage() {
         eyebrow="ALINEA SALES GROUP"
         headline={"From your factory to the RV line \u2014 represented right."}
         subhead={
-          "Alinea Sales Group represents component suppliers across the U.S., Mexico, and Canada to the RV OEMs of Elkhart County \u2014 backed by nearly 25 years of relationships, access, and results."
+          "Alinea Sales Group represents component suppliers across the U.S., Mexico, and Canada to the RV OEMs of Northern Indiana \u2014 backed by nearly 25 years of relationships, access, and results."
         }
         primaryCta={{ label: "Book a Call", href: bookACallHref() }}
         secondaryCta={{ label: "See What We Represent", href: "#what-we-represent" }}

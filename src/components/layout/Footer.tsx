@@ -7,9 +7,10 @@ import {
   ADDRESS_LINE,
   EMAIL,
   NAV_LINKS,
-  PHONE,
+  PHONES,
   SITE_NAME,
   TAGLINE,
+  telHref,
 } from "@/lib/config";
 
 export function Footer() {
@@ -60,20 +61,24 @@ export function Footer() {
               Contact
             </p>
             <ul className="space-y-3">
-              <li>
-                {PHONE ? (
-                  <a
-                    href={`tel:${PHONE.replace(/[^+\d]/g, "")}`}
-                    className="hover:text-asg-gold-light transition-colors"
-                  >
-                    {PHONE}
-                  </a>
-                ) : (
+              {PHONES.length > 0 ? (
+                PHONES.map((phone) => (
+                  <li key={phone}>
+                    <a
+                      href={telHref(phone)}
+                      className="hover:text-asg-gold-light transition-colors"
+                    >
+                      {phone}
+                    </a>
+                  </li>
+                ))
+              ) : (
+                <li>
                   <span className="text-asg-white/60">
                     Phone &mdash; <em className="not-italic text-asg-white/40">[ADAM TODO]</em>
                   </span>
-                )}
-              </li>
+                </li>
+              )}
               <li>
                 {EMAIL ? (
                   <a

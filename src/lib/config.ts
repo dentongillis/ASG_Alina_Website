@@ -8,7 +8,14 @@ export const TAGLINE = "Relationships. Access. Results.";
 
 // [ADAM TODO] — fill these in before launch
 export const PHONE: string = "(574) 370-1614";
+export const PHONE_SECONDARY: string = "(574) 268-8871";
 export const EMAIL: string = "sales@alineasalesgroup.com";
+
+export const PHONES: string[] = [PHONE, PHONE_SECONDARY].filter(Boolean);
+
+export function telHref(phone: string): string {
+  return `tel:${phone.replace(/[^+\d]/g, "")}`;
+}
 
 export const ADDRESS = {
   line1: "223 S Main St",

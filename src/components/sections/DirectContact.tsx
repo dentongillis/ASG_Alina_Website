@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { Container } from "@/components/primitives/Container";
 import { Section } from "@/components/primitives/Section";
 import { Reveal } from "@/components/primitives/Reveal";
-import { ADDRESS, ADDRESS_LINE, EMAIL, PHONE } from "@/lib/config";
+import { ADDRESS, ADDRESS_LINE, EMAIL, PHONES, telHref } from "@/lib/config";
 
 export function DirectContact() {
   return (
@@ -18,13 +18,19 @@ export function DirectContact() {
                 <Phone className="h-5 w-5" strokeWidth={1.5} />
               </span>
               <h3 className="mt-5 text-lg font-semibold text-asg-ink">Phone</h3>
-              {PHONE ? (
-                <a
-                  href={`tel:${PHONE.replace(/[^+\d]/g, "")}`}
-                  className="mt-3 inline-block text-asg-ink/85 hover:text-asg-gold-deep transition-colors"
-                >
-                  {PHONE}
-                </a>
+              {PHONES.length > 0 ? (
+                <ul className="mt-3 space-y-1">
+                  {PHONES.map((phone) => (
+                    <li key={phone}>
+                      <a
+                        href={telHref(phone)}
+                        className="inline-block text-asg-ink/85 hover:text-asg-gold-deep transition-colors"
+                      >
+                        {phone}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               ) : (
                 <p className="mt-3 text-asg-muted italic">
                   [ADAM TODO] Phone number coming soon.

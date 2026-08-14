@@ -10,9 +10,9 @@ import { useFormspree } from "@/lib/useFormspree";
 import { bookACallHref, FORMSPREE_IS_PLACEHOLDER } from "@/lib/config";
 
 const CATEGORIES = [
-  "Interior",
-  "Electrical",
-  "Chassis",
+  "Interior Components",
+  "Interior Decor",
+  "Construction",
   "Emerging Tech",
   "Other",
 ] as const;
